@@ -91,6 +91,7 @@ Class::Utils - Class utilities subroutines.
 =head1 DEPENDENCIES
 
 L<Error::Pure(3pm)>,
+L<Exporter(3pm)>,
 L<Readonly(3pm)>.
 
 =head1 AUTHOR
