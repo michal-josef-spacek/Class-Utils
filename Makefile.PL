@@ -8,6 +8,9 @@ use ExtUtils::MakeMaker;
 # Definition.
 WriteMakefile(
 	'AUTHOR' => 'Michal Špaček <skim@cpan.org>',
+	'CONFIGURE_REQUIRES' => {
+		'ExtUtils::MakeMaker' => 0,
+	},
 	'NAME' => 'Class::Utils',
 	'PREREQ_PM' => {
 		'Error::Pure' => 0.01,
