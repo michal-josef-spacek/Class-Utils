@@ -3,9 +3,6 @@ use Class::Utils qw(set_params);
 use English qw(-no_match_vars);
 use Test::More 'tests' => 2;
 
-# Debug message.
-print "Testing: set_params() subroutine.\n";
-
 # Test.
 my $self = {
 	'key' => undef,
