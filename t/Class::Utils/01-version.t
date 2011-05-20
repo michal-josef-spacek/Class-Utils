@@ -1,3 +1,7 @@
+# Pragmas.
+use strict;
+use warnings;
+
 # Modules.
 use Class::Utils;
 use Test::More 'tests' => 1;

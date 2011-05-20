@@ -1,3 +1,7 @@
+# Pragmas.
+use strict;
+use warnings;
+
 # Modules.
 use Class::Utils qw(set_params);
 use English qw(-no_match_vars);
