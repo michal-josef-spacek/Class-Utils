@@ -3,30 +3,29 @@ use strict;
 use warnings;
 
 # Modules.
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
 
 # Definition.
-WriteMakefile(
-	'AUTHOR' => 'Michal Špaček <skim@cpan.org>',
-	'BUILD_REQUIRES' => {
-		'English' => 0,
-		'File::Object' => 0.01,
-		'Test::More' => 0,
-		'Test::Pod' => 0,
-		'Test::Pod::Coverage' => 0,
-	},
-	'CONFIGURE_REQUIRES' => {
-		'ExtUtils::MakeMaker' => 0,
-	},
-	'LICENSE' => 'bsd',
-	'NAME' => 'Class::Utils',
-	'PREREQ_PM' => {
-		'Error::Pure' => 0.01,
-		'Exporter' => 0,
-		'Readonly' => 0,
-	},
-	'VERSION' => 0.01,
-	'test' => {
-		'TESTS' => 't/Class::Utils/*.t',
-	},
-);
+abstract 'Class utilities subroutines.';
+author 'Michal Špaček <skim@cpan.org>';
+license 'bsd';
+name 'Class-Utils';
+requires 'Error::Pure' => 0.01,
+requires 'Exporter' => 0;
+requires 'Readonly' => 0;
+resources 'repository' => {
+	'url' => 'git://github.com/tupinek/Class-Utils',
+	'web' => 'https://github.com/tupinek/Class-Utils',
+	'type' => 'git',
+};
+test_requires 'English' => 0;
+# TODO Remove (recursive call).
+test_requires 'File::Object' => 0;
+test_requires 'Test::More' => 0;
+test_requires 'Test::Pod' => 0;
+test_requires 'Test::Pod::Coverage' => 0;
+tests_recursive;
+version '0.01';
+
+# Run.
+WriteAll();
