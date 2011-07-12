@@ -64,7 +64,7 @@ Class::Utils - Class utilities subroutines.
  set_params():
          Unknown parameter '%s'.
 
-=head1 EXAMPLE
+=head1 EXAMPLE1
 
  # Pragmas.
  use strict;
@@ -81,7 +81,23 @@ Class::Utils - Class utilities subroutines.
  # Set params.
  set_params($self, 'test', 'real_value');
 
- # In $self->{'test'} will be 'real_value'.
+ # Print 'test' variable.
+ print $self->{'test'}."\n";
+
+ # Output:
+ # real_value
+
+=head1 EXAMPLE2
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Class::Utils qw(set_params);
+
+ # Hash reference with default parameters.
+ my $self = {};
 
  # Set bad params.
  set_params($self, 'bad', 'value');
