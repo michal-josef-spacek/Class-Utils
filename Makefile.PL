@@ -6,7 +6,7 @@ use warnings;
 use inc::Module::Install;
 
 # Definition.
-abstract 'Class utilities subroutines.';
+abstract 'Class utilities.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Class-Utils';

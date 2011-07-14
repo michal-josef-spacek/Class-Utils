@@ -39,7 +39,7 @@ __END__
 
 =head1 NAME
 
-Class::Utils - Class utilities subroutines.
+Class::Utils - Class utilities.
 
 =head1 SYNOPSIS
 
