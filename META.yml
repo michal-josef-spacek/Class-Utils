@@ -1,5 +1,5 @@
 ---
-abstract: 'Class utilities subroutines.'
+abstract: 'Class utilities.'
 author:
   - 'Michal Špaček <skim@cpan.org>'
 build_requires:
