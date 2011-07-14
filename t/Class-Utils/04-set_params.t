@@ -12,10 +12,10 @@ my $self = {
 	'key' => undef,
 };
 set_params($self, 'key', 'value');
-is($self->{'key'}, 'value');
+is($self->{'key'}, 'value', 'Setting right key.');
 
 # Test.
 eval {
 	set_params($self, 'bad_key', 'value');
 };
-is($EVAL_ERROR, "Unknown parameter 'bad_key'.\n");
+is($EVAL_ERROR, "Unknown parameter 'bad_key'.\n", 'Setting bad key.');
