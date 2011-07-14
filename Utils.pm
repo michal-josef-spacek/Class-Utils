@@ -110,6 +110,10 @@ L<Error::Pure(3pm)>,
 L<Exporter(3pm)>,
 L<Readonly(3pm)>.
 
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/Class-Utils>
+
 =head1 AUTHOR
 
  Michal Špaček L<skim@cpan.org>
