@@ -1,0 +1,72 @@
+NAME
+    Class::Utils - Class utilities.
+
+SYNOPSIS
+     use Class::Utils qw(set_params);
+     set_params($self, %parameters);
+
+SUBROUTINES
+    "set_params($self, @params)"
+             Sets object parameters to user values.
+             If setted key doesn't exist in $self object, turn fatal error.
+             $self - Object or hash reference.
+             @params - Key, value pairs.
+
+ERRORS
+     set_params():
+             Unknown parameter '%s'.
+
+EXAMPLE1
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Class::Utils qw(set_params);
+
+     # Hash reference with default parameters.
+     my $self = {
+            'test' => 'default',
+     };
+
+     # Set params.
+     set_params($self, 'test', 'real_value');
+
+     # Print 'test' variable.
+     print $self->{'test'}."\n";
+
+     # Output:
+     # real_value
+
+EXAMPLE2
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Class::Utils qw(set_params);
+
+     # Hash reference with default parameters.
+     my $self = {};
+
+     # Set bad params.
+     set_params($self, 'bad', 'value');
+
+     # Turn error >>Unknown parameter 'bad'.<<.
+
+DEPENDENCIES
+    Error::Pure(3pm), Exporter(3pm), Readonly(3pm).
+
+REPOSITORY
+    <https://github.com/tupinek/Class-Utils>
+
+AUTHOR
+     Michal Špaček L<mailto:skim@cpan.org>
+     L<http://skim.cz>
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.02
+
