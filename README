@@ -61,8 +61,9 @@ REPOSITORY
     <https://github.com/tupinek/Class-Utils>
 
 AUTHOR
-     Michal Špaček L<mailto:skim@cpan.org>
-     L<http://skim.cz>
+    Michal Špaček <mailto:skim@cpan.org>
+
+    <http://skim.cz>
 
 LICENSE AND COPYRIGHT
     BSD license.
