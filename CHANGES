@@ -1,5 +1,6 @@
 0.02
 - Better AUTHOR section in doc.
+- Remove obsolete ';' in code.
 
 0.01 (July 14, 2011)
 - First version.
