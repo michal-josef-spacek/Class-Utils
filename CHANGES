@@ -1,5 +1,6 @@
 0.02
 - Better AUTHOR section in doc.
+- Fix tests with Test::Pod for perl lesser than 5.8.0.
 - Remove obsolete ';' in code.
 - Remove "(3pm)" from pod doc.
 
