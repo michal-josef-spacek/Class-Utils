@@ -7,4 +7,4 @@ use Class::Utils;
 use Test::More 'tests' => 1;
 
 # Test.
-is($Class::Utils::VERSION, '0.02');
+is($Class::Utils::VERSION, 0.02, 'Version.');
