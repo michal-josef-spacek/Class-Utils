@@ -10,7 +10,7 @@ abstract 'Class utilities.';
 author 'Michal Špaček <skim@cpan.org>';
 license 'bsd';
 name 'Class-Utils';
-requires 'Error::Pure' => 0.05,
+requires 'Error::Pure' => 0.07,
 requires 'Exporter' => 0;
 requires 'Readonly' => 0;
 resources 'repository' => {
