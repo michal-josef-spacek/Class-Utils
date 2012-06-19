@@ -13,11 +13,10 @@ name 'Class-Utils';
 requires 'Error::Pure' => 0.07,
 requires 'Exporter' => 0;
 requires 'Readonly' => 0;
-resources 'repository' => {
-	'url' => 'git://github.com/tupinek/Class-Utils',
-	'web' => 'https://github.com/tupinek/Class-Utils',
-	'type' => 'git',
-};
+resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
+	'?Name=Class-Utils';
+resources 'homepage' => 'https://github.com/tupinek/Class-Utils';
+resources 'repository' => 'git://github.com/tupinek/Class-Utils';
 test_requires 'Cwd' => 0;
 test_requires 'English' => 0;
 test_requires 'File::Spec::Functions' => 0;

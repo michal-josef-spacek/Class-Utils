@@ -1,6 +1,7 @@
 0.03
 - Update build system.
 - Add examples/ directory.
+- Fix Makefile.PL to META 1.4.
 
 0.02 (August 3, 2011)
 - Better AUTHOR section in doc.
