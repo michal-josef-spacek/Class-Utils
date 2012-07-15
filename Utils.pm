@@ -13,7 +13,7 @@ use Readonly;
 Readonly::Array our @EXPORT_OK => qw(set_params);
 
 # Version.
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 # Set parameters to user values.
 sub set_params {
@@ -126,6 +126,6 @@ BSD license.
 
 =head1 VERSION
 
-0.03
+0.04
 
 =cut
