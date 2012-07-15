@@ -1,4 +1,4 @@
-0.03
+0.03 (July 15, 2012)
 - Update build system.
 - Add examples/ directory.
 - Fix Makefile.PL to META 1.4.
