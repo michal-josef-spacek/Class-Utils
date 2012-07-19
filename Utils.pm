@@ -44,7 +44,7 @@ Class::Utils - Class utilities.
 =head1 SYNOPSIS
 
  use Class::Utils qw(set_params);
- set_params($self, %parameters);
+ set_params($self, @params);
 
 =head1 SUBROUTINES
 
