@@ -7,10 +7,11 @@ use warnings;
 
 # Modules.
 use Error::Pure qw(err);
+use List::MoreUtils qw(any);
 use Readonly;
 
 # Constants.
-Readonly::Array our @EXPORT_OK => qw(set_params set_split_params);
+Readonly::Array our @EXPORT_OK => qw(set_params set_split_params split_params);
 
 # Version.
 our $VERSION = 0.04;
@@ -45,6 +46,23 @@ sub set_split_params {
 	return @other_params;
 }
 
+# Split params to object and others.
+sub split_params {
+	my ($object_keys_ar, @params) = @_;
+	my @object_params;
+	my @other_params;
+	while (@params) {
+		my $key = shift @params;
+		my $val = shift @params;
+		if (any { $_ eq $key } @{$object_keys_ar}) {
+			push @object_params, $key, $val;
+		} else {
+			push @other_params, $key, $val;
+		}
+	}
+	return (\@object_params, \@other_params);
+}
+
 1;
 
 __END__
@@ -62,6 +80,7 @@ Class::Utils - Class utilities.
  use Class::Utils qw(set_params set_split_params);
  set_params($self, @params);
  my @other_params = set_split_params($self, @params);
+ my ($object_params_ar, $other_params_ar) = split_params($object_keys_ar, @params);
 
 =head1 SUBROUTINES
 
@@ -80,6 +99,12 @@ Class::Utils - Class utilities.
  $self - Object or hash reference.
  @params - Key, value pairs.
  Returns array with other parameters.
+
+=item C<split_params($object_keys_ar, @params)>
+
+ Split params to list of object params and other params.
+ Returns array with two values. First is reference to array with object
+ parameters. Second in reference to array with other parameters.
 
 =back
 

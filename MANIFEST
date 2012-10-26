@@ -19,4 +19,5 @@ t/Class-Utils/02-pod_coverage.t
 t/Class-Utils/03-pod.t
 t/Class-Utils/04-set_params.t
 t/Class-Utils/05-set_split_params.t
+t/Class-Utils/06-split_params.t
 Utils.pm
