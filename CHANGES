@@ -1,5 +1,6 @@
 0.04
 - Documentation update.
+- Add set_split_params() subroutine.
 
 0.03 (July 15, 2012)
 - Update build system.

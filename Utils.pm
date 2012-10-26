@@ -10,7 +10,7 @@ use Error::Pure qw(err);
 use Readonly;
 
 # Constants.
-Readonly::Array our @EXPORT_OK => qw(set_params);
+Readonly::Array our @EXPORT_OK => qw(set_params set_split_params);
 
 # Version.
 our $VERSION = 0.04;
@@ -29,6 +29,22 @@ sub set_params {
 	return;
 }
 
+# Set params for object and other returns.
+sub set_split_params {
+	my ($self, @params) = @_;
+	my @other_params;	
+	while (@params) {
+		my $key = shift @params;
+		my $val = shift @params;
+		if (! exists $self->{$key}) {
+			push @other_params, $key, $val;
+		} else {
+			$self->{$key} = $val;
+		}
+	}
+	return @other_params;
+}
+
 1;
 
 __END__
@@ -43,8 +59,9 @@ Class::Utils - Class utilities.
 
 =head1 SYNOPSIS
 
- use Class::Utils qw(set_params);
+ use Class::Utils qw(set_params set_split_params);
  set_params($self, @params);
+ my @other_params = set_split_params($self, @params);
 
 =head1 SUBROUTINES
 
@@ -56,6 +73,13 @@ Class::Utils - Class utilities.
  If setted key doesn't exist in $self object, turn fatal error.
  $self - Object or hash reference.
  @params - Key, value pairs.
+
+=item C<set_split_params($self, @params)>
+
+ Set object params and other returns.
+ $self - Object or hash reference.
+ @params - Key, value pairs.
+ Returns array with other parameters.
 
 =back
 
@@ -103,6 +127,35 @@ Class::Utils - Class utilities.
  set_params($self, 'bad', 'value');
 
  # Turn error >>Unknown parameter 'bad'.<<.
+
+=head1 EXAMPLE3
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Class::Utils qw(set_split_params);
+
+ # Hash reference with default parameters.
+ my $self = {
+        'foo' => undef,
+ };
+
+ # Set bad params.
+ my @other_params = set_split_params($self,
+	'foo', 'bar',
+	'bad', 'value',
+ );
+
+ # Print out.
+ print "Foo: $self->{'foo'}\n";
+ print join ': ', @other_params;
+ print "\n";
+
+ # Output:
+ # Foo: bar
+ # bad: value
 
 =head1 DEPENDENCIES
 
