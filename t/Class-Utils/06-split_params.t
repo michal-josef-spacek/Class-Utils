@@ -10,27 +10,28 @@ use Test::More 'tests' => 4;
 my ($ret1_ar, $ret2_ar) = split_params([], 'key', 'value');
 is_deeply(
 	$ret1_ar,
-	['key', 'value'],
+	[],
 	'Object parameters 1.',
 );
 is_deeply(
 	$ret2_ar,
-	[],
+	['key', 'value'],
 	'Other parameters 1.',
 );
 
 # Test.
-($ret1_ar, $ret2_ar) = split_params(['foo'],
+($ret1_ar, $ret2_ar) = split_params(
+	['foo'],
 	'key', 'value',
 	'foo', 'bar',
 );
 is_deeply(
 	$ret1_ar,
-	['key', 'value'],
+	['foo', 'bar'],
 	'Object parameters 2.',
 );
 is_deeply(
 	$ret2_ar,
-	['foo', 'bar'],
+	['key', 'value'],
 	'Other parameters 2.',
 );
