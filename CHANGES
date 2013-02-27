@@ -1,5 +1,6 @@
 0.04
 - Documentation update.
+- Add Test::NoWarnings to tests.
 - Add set_split_params() subroutine.
 - Add split_params() subroutine.
 

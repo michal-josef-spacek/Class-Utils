@@ -5,7 +5,8 @@ use warnings;
 # Modules.
 use Class::Utils qw(set_split_params);
 use English qw(-no_match_vars);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
+use Test::NoWarnings;
 
 # Test.
 my $self = {

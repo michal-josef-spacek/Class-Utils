@@ -4,7 +4,8 @@ use warnings;
 
 # Modules.
 use Class::Utils qw(split_params);
-use Test::More 'tests' => 4;
+use Test::More 'tests' => 5;
+use Test::NoWarnings;
 
 # Test.
 my ($ret1_ar, $ret2_ar) = split_params([], 'key', 'value');
