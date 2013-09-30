@@ -1,17 +1,18 @@
 0.04
-- Documentation update.
-- Add Test::NoWarnings to tests.
+ - Documentation update.
+ - Add Test::NoWarnings to tests.
+ - Rewrite Changes file to CPAN::Changes::SPEC format.
 
-0.03 (July 15, 2012)
-- Update build system.
-- Add examples/ directory.
-- Fix Makefile.PL to META 1.4.
+0.03 2012-07-15
+ - Update build system.
+ - Add examples/ directory.
+ - Fix Makefile.PL to META 1.4.
 
-0.02 (August 3, 2011)
-- Better AUTHOR section in doc.
-- Fix tests with Test::Pod for perl lesser than 5.8.0.
-- Remove obsolete ';' in code.
-- Remove "(3pm)" from pod doc.
+0.02 2011-08-03
+ - Better AUTHOR section in doc.
+ - Fix tests with Test::Pod for perl lesser than 5.8.0.
+ - Remove obsolete ';' in code.
+ - Remove "(3pm)" from pod doc.
 
-0.01 (July 14, 2011)
-- First version.
+0.01 2011-07-14
+ - First version.
