@@ -5,24 +5,21 @@ use strict;
 use warnings;
 
 # Modules.
-use Class::Utils qw(set_split_params);
+use Class::Utils qw(set_params_pub);
 
 # Hash reference with default parameters.
 my $self = {
-       'foo' => undef,
+        'public' => 'default',
 };
 
-# Set bad params.
-my @other_params = set_split_params($self,
-'foo', 'bar',
-'bad', 'value',
+# Set params.
+set_params_pub($self,
+        'public' => 'value',
+        '_private' => 'value',
 );
 
-# Print out.
-print "Foo: $self->{'foo'}\n";
-print join ': ', @other_params;
-print "\n";
+# Print 'test' variable.
+print $self->{'public'}."\n";
 
 # Output:
-# Foo: bar
-# bad: value
+# value

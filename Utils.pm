@@ -11,7 +11,8 @@ use List::MoreUtils qw(any);
 use Readonly;
 
 # Constants.
-Readonly::Array our @EXPORT_OK => qw(set_params set_split_params split_params);
+Readonly::Array our @EXPORT_OK => qw(set_params set_params_pub set_split_params
+	split_params);
 
 # Version.
 our $VERSION = 0.06;
@@ -22,6 +23,23 @@ sub set_params {
 	while (@params) {
 		my $key = shift @params;
 		my $val = shift @params;
+		if (! exists $self->{$key}) {
+			err "Unknown parameter '$key'.";
+		}
+		$self->{$key} = $val;
+	}
+	return;
+}
+
+# Set parameters to user values - public variables.
+sub set_params_pub {
+	my ($self, @params) = @_;
+	while (@params) {
+		my $key = shift @params;
+		my $val = shift @params;
+		if ($key =~ m/^_/ms) {
+			next;
+		}
 		if (! exists $self->{$key}) {
 			err "Unknown parameter '$key'.";
 		}
@@ -79,6 +97,7 @@ Class::Utils - Class utilities.
 
  use Class::Utils qw(set_params set_split_params);
  set_params($self, @params);
+ set_params_pub($self, @params);
  my @other_params = set_split_params($self, @params);
  my ($object_params_ar, $other_params_ar) = split_params($object_keys_ar, @params);
 
@@ -90,6 +109,15 @@ Class::Utils - Class utilities.
 
  Sets object parameters to user values.
  If setted key doesn't exist in $self object, turn fatal error.
+ $self - Object or hash reference.
+ @params - Key, value pairs.
+
+=item C<set_params_pub($self, @params)>
+
+ Sets object parameters to user values. Only public arguments.
+ Private arguments are defined by '_' character on begin of key and will be
+ skip.
+ If setted public key doesn't exist in $self object, turn fatal error.
  $self - Object or hash reference.
  @params - Key, value pairs.
 
@@ -111,6 +139,9 @@ Class::Utils - Class utilities.
 =head1 ERRORS
 
  set_params():
+         Unknown parameter '%s'.
+
+ set_params_pub():
          Unknown parameter '%s'.
 
 =head1 EXAMPLE1
@@ -154,6 +185,32 @@ Class::Utils - Class utilities.
  # Turn error >>Unknown parameter 'bad'.<<.
 
 =head1 EXAMPLE3
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Class::Utils qw(set_params_pub);
+
+ # Hash reference with default parameters.
+ my $self = {
+         'public' => 'default',
+ };
+
+ # Set params.
+ set_params_pub($self,
+         'public' => 'value',
+         '_private' => 'value',
+ );
+
+ # Print 'test' variable.
+ print $self->{'public'}."\n";
+
+ # Output:
+ # value
+
+=head1 EXAMPLE4
 
  # Pragmas.
  use strict;

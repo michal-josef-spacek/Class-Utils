@@ -1,4 +1,5 @@
 0.06
+ - Add set_params_pub() subroutine.
  - Add set_split_params() subroutine.
  - Add split_params() subroutine.
  - Fix dependencies in DEPENDENCIES section in doc.
