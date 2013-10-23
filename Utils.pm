@@ -186,6 +186,7 @@ Class::Utils - Class utilities.
 
 L<Error::Pure>,
 L<Exporter>,
+L<List::MoreUtils>,
 L<Readonly>.
 
 =head1 REPOSITORY
