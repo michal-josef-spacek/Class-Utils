@@ -13,6 +13,7 @@ name 'Class-Utils';
 requires 'Error::Pure' => 0.09,
 requires 'Exporter' => 0;
 requires 'Readonly' => 0;
+requires 'perl' => '5.6.0';
 resources 'bugtracker' => 'https://rt.cpan.org/Public/Dist/Display.html'.
 	'?Name=Class-Utils';
 resources 'homepage' => 'https://github.com/tupinek/Class-Utils';
