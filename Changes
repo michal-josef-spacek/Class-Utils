@@ -6,7 +6,7 @@
  - Add set_split_params() subroutine.
  - Add split_params() subroutine.
  - Fix dependencies in DEPENDENCIES section in doc.
- - Update Module::Install to 1.08 version.
+ - Update Module::Install to 1.10 version.
 
 0.05 2013-10-01
  - Fix tests in last version.
