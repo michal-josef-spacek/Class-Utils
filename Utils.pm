@@ -15,7 +15,7 @@ Readonly::Array our @EXPORT_OK => qw(set_params set_params_pub set_split_params
 	split_params);
 
 # Version.
-our $VERSION = 0.07;
+our $VERSION = 0.08;
 
 # Set parameters to user values.
 sub set_params {
@@ -292,6 +292,6 @@ L<http://skim.cz>
 
 =head1 VERSION
 
-0.07
+0.08
 
 =cut
