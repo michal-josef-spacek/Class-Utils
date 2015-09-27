@@ -7,7 +7,7 @@ use inc::Module::Install;
 
 # Definition.
 abstract 'Class utilities.';
-author 'Michal Špaček <skim@cpan.org>';
+author 'Michal Spacek <skim@cpan.org>';
 license 'bsd';
 name 'Class-Utils';
 readme_from 'Utils.pm';

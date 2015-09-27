@@ -1,5 +1,6 @@
 0.07
  - Improve EXAMPLE5 section in doc.
+ - Remove diacritics from author name.
 
 0.06 2014-08-20T09:01:08+02:00
  - Add 'readme_from' directive to Makefile.PL.
