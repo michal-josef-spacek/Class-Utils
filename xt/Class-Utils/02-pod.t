@@ -16,6 +16,5 @@ SKIP: {
 		skip 'Perl version lesser then 5.8.0.', 1;
 	}
 	require Test::Pod;
-	Test::Pod::pod_file_ok(realpath(catfile($Bin, '..', '..',
-		'Utils.pm')));
+	Test::Pod::pod_file_ok(realpath(catfile($Bin, '..', '..', 'Utils.pm')));
 };
