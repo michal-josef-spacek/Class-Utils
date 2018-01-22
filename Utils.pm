@@ -1,11 +1,9 @@
 package Class::Utils;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
 use Error::Pure qw(err);
 use List::MoreUtils qw(any);
 use Readonly;
@@ -146,11 +144,9 @@ Class::Utils - Class utilities.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Utils qw(set_params);
 
  # Hash reference with default parameters.
@@ -169,11 +165,9 @@ Class::Utils - Class utilities.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Utils qw(set_params);
 
  # Hash reference with default parameters.
@@ -186,11 +180,9 @@ Class::Utils - Class utilities.
 
 =head1 EXAMPLE3
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Utils qw(set_params_pub);
 
  # Hash reference with default parameters.
@@ -212,11 +204,9 @@ Class::Utils - Class utilities.
 
 =head1 EXAMPLE4
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Utils qw(set_split_params);
 
  # Hash reference with default parameters.
@@ -241,11 +231,9 @@ Class::Utils - Class utilities.
 
 =head1 EXAMPLE5
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Class::Utils qw(split_params);
 
  # Example parameters.
