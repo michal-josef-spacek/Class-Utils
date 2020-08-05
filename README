@@ -155,7 +155,7 @@ DEPENDENCIES
     Error::Pure, Exporter, List::MoreUtils, Readonly.
 
 REPOSITORY
-    <https://github.com/tupinek/Class-Utils>
+    <https://github.com/michal-josef-spacek/Class-Utils>
 
 AUTHOR
     Michal Josef Špaček <mailto:skim@cpan.org>

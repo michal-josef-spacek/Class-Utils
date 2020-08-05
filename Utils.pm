@@ -266,7 +266,7 @@ L<Readonly>.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/Class-Utils>
+L<https://github.com/michal-josef-spacek/Class-Utils>
 
 =head1 AUTHOR
 

@@ -1,5 +1,6 @@
 0.09
  - Improve SYNOPSIS section in doc.
+ - Update author github username.
 
 0.08 2018-01-22T16:30:04+01:00
  - Fix Makefile.PL for new version of Perl and no default »use lib '.'«.
