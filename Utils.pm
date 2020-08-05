@@ -94,6 +94,7 @@ Class::Utils - Class utilities.
 =head1 SYNOPSIS
 
  use Class::Utils qw(set_params set_split_params);
+
  set_params($self, @params);
  set_params_pub($self, @params);
  my @other_params = set_split_params($self, @params);
