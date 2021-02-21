@@ -1,4 +1,4 @@
-0.09
+0.09 2021-02-21T14:08:52+01:00
  - Add blank lines before return and after arguments.
  - Fix bugtracker.
  - Improve LICENSE AND COPYRIGHT section in doc.
