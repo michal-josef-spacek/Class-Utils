@@ -4,12 +4,14 @@ TODO
 3. Pridat nejake realne priklady.
    Trida, RozsirenaTrida. Priklad rebless z Trida na RozsirenaTrida
 4. Zkusit profiler na jednoduchy priklad. Vypada, ze zavedeni je docela pomale.
-5. Kdyz mam nastaveno v env Error::Pure::Type na ANSIColor a instaluji na cistem perlu, tak
-se vytvori error "Can't locate Error/Pure/ANSIColor/AllError.pm in @INC".
-http://www.cpantesters.org/cpan/report/2bbdfe00-85bd-11ec-80af-c238935d0ff4
 6.
 
 Applied
 =======
 1. Opravit testy.
 OK [20121119] skim
+
+5. Kdyz mam nastaveno v env Error::Pure::Type na ANSIColor a instaluji na cistem perlu, tak
+se vytvori error "Can't locate Error/Pure/ANSIColor/AllError.pm in @INC".
+http://www.cpantesters.org/cpan/report/2bbdfe00-85bd-11ec-80af-c238935d0ff4
+OK [20220207] skim
