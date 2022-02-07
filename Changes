@@ -1,5 +1,6 @@
 0.11
  - Fix default Error::Pure module, which is used for error in tests.
+ - Update copyright years.
 
 0.10 2021-06-06T00:25:11+02:00
  - Fix minimal version of Perl.
