@@ -1,4 +1,4 @@
-0.11
+0.11 2022-02-07T22:25:26+01:00
  - Fix default Error::Pure module, which is used for error in tests.
  - Update copyright years.
 
