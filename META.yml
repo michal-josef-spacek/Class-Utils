@@ -24,7 +24,7 @@ no_index:
     - t
     - xt
 requires:
-  Error::Pure: 0.09
+  Error::Pure: 0.27
   Exporter: 0
   Readonly: 0
   perl: 5.8.0
