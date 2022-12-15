@@ -22,7 +22,7 @@ readme_from 'Utils.pm';
 recursive_author_tests('xt');
 requires 'Error::Pure' => 0.27,
 requires 'Exporter' => 0;
-requires 'List::Util' => 0;
+requires 'List::Util' => 1.33;
 requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Class-Utils/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Class-Utils';
