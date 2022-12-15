@@ -182,6 +182,8 @@ parameters. Second in reference to array with other parameters.
 
 =head1 EXAMPLE1
 
+=for comment filename=set_params_ok.pl
+
  use strict;
  use warnings;
 
@@ -203,6 +205,8 @@ parameters. Second in reference to array with other parameters.
 
 =head1 EXAMPLE2
 
+=for comment filename=set_params_fail.pl
+
  use strict;
  use warnings;
 
@@ -217,6 +221,8 @@ parameters. Second in reference to array with other parameters.
  # Turn error >>Unknown parameter 'bad'.<<.
 
 =head1 EXAMPLE3
+
+=for comment filename=set_params_pub.pl
 
  use strict;
  use warnings;
@@ -241,6 +247,8 @@ parameters. Second in reference to array with other parameters.
  # value
 
 =head1 EXAMPLE4
+
+=for comment filename=set_split_params.pl
 
  use strict;
  use warnings;
@@ -268,6 +276,8 @@ parameters. Second in reference to array with other parameters.
  # bad: value
 
 =head1 EXAMPLE5
+
+=for comment filename=split_params.pl
 
  use strict;
  use warnings;

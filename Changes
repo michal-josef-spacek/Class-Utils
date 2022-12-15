@@ -1,5 +1,6 @@
 0.13
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Rename example files to better names.
  - Rewrite doc to use =head2.
  - Rewrite from List::MoreUtils to List::Util.
 
