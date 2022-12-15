@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 use Error::Pure qw(err);
-use List::MoreUtils qw(any);
+use List::Util qw(any);
 use Readonly;
 
 # Constants.
@@ -269,7 +269,7 @@ Class::Utils - Class utilities.
 
 L<Error::Pure>,
 L<Exporter>,
-L<List::MoreUtils>,
+L<List::Util>,
 L<Readonly>.
 
 =head1 REPOSITORY

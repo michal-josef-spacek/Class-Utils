@@ -152,7 +152,7 @@ EXAMPLE5
      # * bad: value
 
 DEPENDENCIES
-    Error::Pure, Exporter, List::MoreUtils, Readonly.
+    Error::Pure, Exporter, List::Util, Readonly.
 
 REPOSITORY
     <https://github.com/michal-josef-spacek/Class-Utils>
