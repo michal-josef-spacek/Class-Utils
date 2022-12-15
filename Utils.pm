@@ -110,38 +110,67 @@ Class::Utils - Class utilities.
 
 =head1 SUBROUTINES
 
-=over 8
+=head2 C<set_params>
 
-=item C<set_params($self, @params)>
+ set_params($self, @params);
 
- Sets object parameters to user values.
- If setted key doesn't exist in $self object, turn fatal error.
- $self - Object or hash reference.
- @params - Key, value pairs.
+Sets object parameters to user values.
+If set key doesn't exist in C<$self> object, turn fatal error.
 
-=item C<set_params_pub($self, @params)>
+$self - Object or hash reference.
+@params - Key, value pairs.
 
- Sets object parameters to user values. Only public arguments.
- Private arguments are defined by '_' character on begin of key and will be
- skip.
- If setted public key doesn't exist in $self object, turn fatal error.
- $self - Object or hash reference.
- @params - Key, value pairs.
+=head2 C<set_params_pub>
 
-=item C<set_split_params($self, @params)>
+ set_params_pub($self, @params);
 
- Set object params and other returns.
- $self - Object or hash reference.
- @params - Key, value pairs.
- Returns array with other parameters.
+Sets object parameters to user values. Only public arguments.
+Private arguments are defined by '_' character on begin of key and will be
+skip.
+If set public key doesn't exist in C<$self> object, turn fatal error.
 
-=item C<split_params($object_keys_ar, @params)>
+=over
 
- Split params to list of object params and other params.
- Returns array with two values. First is reference to array with object
- parameters. Second in reference to array with other parameters.
+=item C<$self>
+
+Object or hash reference.
+
+=item C<@params>
+
+Key, value pairs.
 
 =back
+
+Returns undef.
+
+=head2 C<set_split_params>
+
+ my @other_params = set_split_params($self, @params);
+
+Set object params and other returns.
+
+=over
+
+=item C<$self>
+
+Object or hash reference.
+
+=item C<@params>
+
+Key, value pairs.
+
+=back
+
+Returns list of parameters.
+
+=head2 C<split_params>
+
+ my ($object_params_ar, $other_params_ar) = split_params($object_keys_ar, @params);
+
+Split params to list of object params and other params.
+
+Returns array with two values. First is reference to array with object
+parameters. Second in reference to array with other parameters.
 
 =head1 ERRORS
 

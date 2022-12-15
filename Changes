@@ -1,5 +1,6 @@
 0.13
  - Improve LICENSE AND COPYRIGHT section in doc.
+ - Rewrite doc to use =head2.
  - Rewrite from List::MoreUtils to List::Util.
 
 0.12 2022-02-24T00:35:16+01:00
