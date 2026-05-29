@@ -108,6 +108,13 @@ Class::Utils - Class utilities.
  my @other_params = set_split_params($self, @params);
  my ($object_params_ar, $other_params_ar) = split_params($object_keys_ar, @params);
 
+=head1 DESCRIPTION
+
+Class::Utils provides helper subroutines for working with object or hash
+references and parameter lists. It can assign incoming key/value pairs to an
+object, filter out private parameters, and split arguments into object-owned
+and external parts.
+
 =head1 SUBROUTINES
 
 =head2 C<set_params>
