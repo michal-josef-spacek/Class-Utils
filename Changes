@@ -1,5 +1,6 @@
 0.15
  - Update copyright years.
+ - Update to Module::Install@1.21.
 
 0.14 2022-12-15T16:11:54+01:00
  - Fix minimal depndency for List::Util::any().
